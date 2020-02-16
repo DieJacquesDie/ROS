@@ -1,0 +1,8 @@
+prefix=/home/turtle/catkin_ws/install
+
+Name: tiziano
+Description: Description of tiziano
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtle/catkin_ws/install/lib 
+Requires: 

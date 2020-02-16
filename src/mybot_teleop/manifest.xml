@@ -1,0 +1,14 @@
+<package>
+  <description brief="mybot_teleop">
+
+     mybot_teleop
+
+  </description>
+  <author>JACQUES DIE</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/mybot_teleop</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+
+</package>
