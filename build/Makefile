@@ -842,6 +842,19 @@ beginner_tutorials_generate_messages_py/fast:
 .PHONY : beginner_tutorials_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f ps3/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ps3/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -851,7 +864,7 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f ps3/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ps3/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -864,7 +877,7 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f ps3/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ps3/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -877,8 +890,151 @@ geometry_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f ps3/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ps3/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ps3/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ps3/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_lisp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ps3/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ps3/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_eus
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_eus
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ps3/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ps3/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+.PHONY : diagnostic_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_cpp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ps3/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ps3/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_py
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	$(MAKE) -f ps3/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ps3/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_nodejs
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_nodejs
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ps3/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ps3/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ps3/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ps3/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ps3/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ps3/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ps3/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ps3/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ps3/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ps3/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f ps3/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ps3/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named turtlebot3_diagnostics
@@ -892,162 +1048,6 @@ turtlebot3_diagnostics: cmake_check_build_system
 turtlebot3_diagnostics/fast:
 	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/turtlebot3_diagnostics.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/turtlebot3_diagnostics.dir/build
 .PHONY : turtlebot3_diagnostics/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_nodejs
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_nodejs
-.PHONY : diagnostic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
-
-# Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_cpp
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
-.PHONY : diagnostic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_eus
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_eus
-.PHONY : diagnostic_msgs_generate_messages_eus
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_eus/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-.PHONY : diagnostic_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_eus
-
-# Build rule for target.
-sensor_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_lisp
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_py
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_py
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	$(MAKE) -f turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make turtlebot3/turtlebot3_bringup/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named turtlebot3_example_generate_messages_py
@@ -1764,22 +1764,22 @@ help:
 	@echo "... beginner_tutorials_genlisp"
 	@echo "... beginner_tutorials_generate_messages"
 	@echo "... beginner_tutorials_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... turtlebot3_diagnostics"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... diagnostic_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... diagnostic_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... turtlebot3_diagnostics"
 	@echo "... turtlebot3_example_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_lisp"

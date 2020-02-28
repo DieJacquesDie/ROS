@@ -3,6 +3,6 @@ prefix=/home/turtle/catkin_ws/install
 Name: turtlebot3_msgs
 Description: Description of turtlebot3_msgs
 Version: 1.0.0
-Cflags: -I/home/turtle/catkin_ws/install/include
-Libs: -L/home/turtle/catkin_ws/install/lib 
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
 Requires: std_msgs message_runtime
