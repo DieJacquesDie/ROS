@@ -1,0 +1,13 @@
+<launch>
+    <!-- Run one mybot_teleop node -->
+
+    <param name="topic" type="string" value="/cmd_vel" />
+
+    <param name="linear_init" type="double" value="0.05" />
+    <param name="angular_init" type="double" value="0.5" />
+
+    <param name="linear_scale" type="double" value="0.01" />
+    <param name="angular_scale" type="double" value="0.05" />
+
+    <node pkg="mybot_teleop" name="teleop" type="mybot_teleop.py" output="screen" required="True"> </node>
+</launch>
