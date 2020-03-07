@@ -9,5 +9,7 @@
     <param name="linear_scale" type="double" value="0.01" />
     <param name="angular_scale" type="double" value="0.05" />
 
+    <param name="robot" type="string" value='/turtle1/cmd_vel' />
+
     <node pkg="mybot_teleop" name="teleop" type="mybot_teleop.py" output="screen" required="True"> </node>
 </launch>

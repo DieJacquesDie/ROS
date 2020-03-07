@@ -1,0 +1,46 @@
+<launch>
+
+  <arg name="world_name" default="worlds/empty.world"/>
+  <arg name="model" default="$(find part2_robot_descriptions)/urdf/robot1.xacro"/>
+  <arg name="robot_initial_pose" default="$(optenv ROBOT_INITIAL_POSE)"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
+
+  <arg name="model2" default="$(find part2_robot_descriptions)/urdf/robot2.xacro"/>
+  <param name="robot_description2" command="$(find xacro)/xacro --inorder $(arg model2)" />
+
+  <arg name="model3" default="$(find part2_robot_descriptions)/urdf/robot3.xacro"/>
+  <param name="robot_description3" command="$(find xacro)/xacro --inorder $(arg model3)" />
+
+  <arg name="model4" default="$(find part2_robot_descriptions)/urdf/robot4.xacro"/>
+  <param name="robot_description4" command="$(find xacro)/xacro --inorder $(arg model4)" />
+
+  <arg name="model5" default="$(find part2_robot_descriptions)/urdf/robot5.xacro"/>
+  <param name="robot_description5" command="$(find xacro)/xacro --inorder $(arg model5)" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/> <!-- world_name is wrt GAZEBO_RESOURCE_PATH environment variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model"
+     args="$(arg robot_initial_pose) -unpause -urdf -param robot_description -model mobile_base"/>
+
+  <node name="spawn_robot2" pkg="gazebo_ros" type="spawn_model"
+    args="$(arg robot_initial_pose) -unpause -urdf -param robot_description2 -model mobile_base2"/>
+
+  <node name="spawn_robot3" pkg="gazebo_ros" type="spawn_model"
+      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description3 -model mobile_base3"/>
+
+  <node name="spawn_robot4" pkg="gazebo_ros" type="spawn_model"
+      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description4 -model mobile_base4"/>
+      
+  <node name="spawn_robot5" pkg="gazebo_ros" type="spawn_model"
+      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description5 -model mobile_base5"/>
+
+
+
+</launch>

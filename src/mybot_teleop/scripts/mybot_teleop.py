@@ -10,7 +10,7 @@ from geometry_msgs.msg import Twist
 # =============================================================
 def simple_publisher(msg):
 
-    pub=rospy.Publisher('/turtle1/cmd_vel',Twist,queue_size=10)
+    pub=rospy.Publisher(rospy.get_param("robot"),Twist,queue_size=10)
     rospy.init_node("simple_publisher", anonymous=True)
     rate = rospy.Rate(10)
     if not rospy.is_shutdown():
