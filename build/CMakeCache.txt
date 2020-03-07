@@ -269,6 +269,30 @@ actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
+baxter_common_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/baxter_common/baxter_common
+
+//Value Computed by CMake
+baxter_common_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/baxter_common/baxter_common
+
+//Value Computed by CMake
+baxter_core_msgs_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/baxter_common/baxter_core_msgs
+
+//Value Computed by CMake
+baxter_core_msgs_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/baxter_common/baxter_core_msgs
+
+//Value Computed by CMake
+baxter_description_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/baxter_common/baxter_description
+
+//Value Computed by CMake
+baxter_description_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/baxter_common/baxter_description
+
+//Value Computed by CMake
+baxter_maintenance_msgs_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/baxter_common/baxter_maintenance_msgs
+
+//Value Computed by CMake
+baxter_maintenance_msgs_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/baxter_common/baxter_maintenance_msgs
+
+//Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/beginner_tutorials
 
 //Value Computed by CMake
@@ -369,10 +393,22 @@ message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //Value Computed by CMake
+part2_robot_descriptions_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/part2_robot_descriptions
+
+//Value Computed by CMake
+part2_robot_descriptions_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/part2_robot_descriptions
+
+//Value Computed by CMake
 ps3_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/ps3
 
 //Value Computed by CMake
 ps3_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/ps3
+
+//Value Computed by CMake
+rethink_ee_description_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/baxter_common/rethink_ee_description
+
+//Value Computed by CMake
+rethink_ee_description_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/baxter_common/rethink_ee_description
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
@@ -593,7 +629,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

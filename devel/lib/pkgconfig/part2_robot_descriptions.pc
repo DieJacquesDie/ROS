@@ -1,0 +1,8 @@
+prefix=/home/turtle/catkin_ws/devel
+
+Name: part2_robot_descriptions
+Description: Description of part2_robot_descriptions
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
