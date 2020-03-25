@@ -43,7 +43,13 @@
       </surface>
     </collision>
     <visual name="caster_front_visual">
-      <origin rpy=" 0 0 0" xyz="0.2 0 -0.05"/>
+      <origin rpy=" 0 0 0" xyz="0.4 0 -0.05"/>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    </visual>
+    <visual name="caster_front_visual_2">
+      <origin rpy=" 0 0 0" xyz="-0.4 0 -0.05"/>
       <geometry>
         <sphere radius="0.05"/>
       </geometry>

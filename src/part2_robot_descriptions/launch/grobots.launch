@@ -30,16 +30,16 @@
      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description -model mobile_base"/>
 
   <node name="spawn_robot2" pkg="gazebo_ros" type="spawn_model"
-    args="$(arg robot_initial_pose) -unpause -urdf -param robot_description2 -model mobile_base2"/>
+    args="-x 0 -y 2 -z 2 -unpause -urdf -param robot_description2 -model mobile_base2"/>
 
   <node name="spawn_robot3" pkg="gazebo_ros" type="spawn_model"
-      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description3 -model mobile_base3"/>
+      args="-x 2 -y -2 -z 2 -unpause -urdf -param robot_description3 -model mobile_base3"/>
 
   <node name="spawn_robot4" pkg="gazebo_ros" type="spawn_model"
-      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description4 -model mobile_base4"/>
-      
+      args="-x -2 -y 2 -z 2 -unpause -urdf -param robot_description4 -model mobile_base4"/>
+
   <node name="spawn_robot5" pkg="gazebo_ros" type="spawn_model"
-      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description5 -model mobile_base5"/>
+      args="-x 2 -y 0 -z 2 -unpause -urdf -param robot_description5 -model mobile_base5"/>
 
 
 

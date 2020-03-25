@@ -5,15 +5,13 @@ import rospy
 import sys, termios, tty
 from geometry_msgs.msg import Twist
 
-###GLOBAL
-
 
 # Function to Publish
 # =============================================================
 def simple_publisher(msg):
 
     pub=rospy.Publisher(rospy.get_param("robot"),Twist,queue_size=10)
-    rospy.init_node("simple_publisher", anonymous=True)
+    rospy.init_node("teleop_lidar", anonymous=True)
     rate = rospy.Rate(10)
     if not rospy.is_shutdown():
 	rospy.loginfo(msg)
@@ -110,6 +108,4 @@ if __name__ == '__main__':
 
 
         except rospy.ROSInterruptException:
-            print("ROSInterruptException")
-
-    print("terminated 'while'")
+            pass

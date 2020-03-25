@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="world_name" default="worlds/empty_world.world"/>
+  <arg name="model" default="$(find part2_robot_descriptions)/urdf/robot_with_sensors.xacro"/>
+  <arg name="gui" default="true" />
+  <arg name="rvizconfig" default="$(find part2_robot_descriptions)/rviz/default.rviz" />
+  <arg name="robot_initial_pose" default="$(optenv ROBOT_INITIAL_POSE)"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <param name="robot" type="string" value='/cmd_vel' />
+  <param name="topic" type="string" value="/cmd_vel" />
+
+  <param name="linear_init" type="double" value="0.05" />
+  <param name="angular_init" type="double" value="0.5" />
+
+  <param name="linear_scale" type="double" value="0.01" />
+  <param name="angular_scale" type="double" value="0.05" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/> <!-- world_name is wrt GAZEBO_RESOURCE_PATH environment variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+
+  <node pkg="part2_robot_descriptions" name="teleop_lidar" type="teleop_lidar.py" output="screen" required="False" launch-prefix="xterm -e"/>
+  <node pkg="part2_robot_descriptions" name="lidar_listener" type="front_lidar.py" output="screen" required="False" />
+  
+  <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model" args="$(arg robot_initial_pose) -unpause -urdf -param robot_description -model mobile_base"/>
+</launch>
