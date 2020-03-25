@@ -1,10 +1,12 @@
 <launch>
 
-  <arg name="world_name" default="worlds/empty_world.world"/>
+  <arg name="world_name" default="worlds/empty.world"/>
   <arg name="model" default="$(find part2_robot_descriptions)/urdf/robot1.xacro"/>
   <arg name="robot_initial_pose" default="$(optenv ROBOT_INITIAL_POSE)"/>
   <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
 
+  <arg name="model5" default="$(find part2_robot_descriptions)/urdf/robot5.xacro"/>
+  <param name="robot_description5" command="$(find xacro)/xacro --inorder $(arg model5)" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(arg world_name)"/> <!-- world_name is wrt GAZEBO_RESOURCE_PATH environment variable -->
@@ -17,4 +19,9 @@
 
   <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model"
      args="$(arg robot_initial_pose) -unpause -urdf -param robot_description -model mobile_base"/>
+
+     <node name="spawn_robot5" pkg="gazebo_ros" type="spawn_model"
+         args="-x 2 -y 2 -z 2 -unpause -urdf -param robot_description5 -model mobile_base5"/>
+
+
 </launch>

@@ -74,7 +74,7 @@
     <origin rpy="0 0 0" xyz="-0.05 0.15 0"/>
     <child link="link_right_wheel"/>
     <parent link="link_chassis"/>
-    <axis rpy="0 0 0" xyz="1 0 0"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
     <limit effort="10000" velocity="1000"/>
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
@@ -103,7 +103,7 @@
     <origin rpy="0 0 0" xyz="-0.05 -0.15 0"/>
     <child link="link_left_wheel"/>
     <parent link="link_chassis"/>
-    <axis rpy="0 0 0" xyz="1 0 0"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
     <limit effort="10000" velocity="1000"/>
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
