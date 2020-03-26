@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+"""
+SIMPLY PUT :
+-get lidar datas
+-put mean of lidar datas in a tab of directions of the robot
+-setting a treshold for the tab
+-if treshold is not respected : stop.
+-bonus : check previous datas to not spamcall teleop.
+"""
 import rospy
 import numpy as np
 from pykeyboard import PyKeyboard

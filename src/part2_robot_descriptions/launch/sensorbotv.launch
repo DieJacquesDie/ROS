@@ -1,16 +1,23 @@
+<?xml version="1.0"?>
 <launch>
   <arg name="model" default="$(find part2_robot_descriptions)/urdf/robot_with_sensors.xacro"/>
-  <arg name="gui" default="false" />
+  <arg name="gui" default="true" />
   <arg name="rvizconfig" default="$(find part2_robot_descriptions)/rviz/default.rviz" />
 
-
-  <param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
-  <param name="robot_description_semantic" command="$(find xacro)/xacro --inorder $(arg model)" />
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
   <param name="use_gui" value="$(arg gui)"/>
 
-  <node name="my_frame" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 map my_frame 10"/>
+  <param name="robot" type="string" value='/cmd_vel' />
+  <param name="topic" type="string" value="/cmd_vel" />
+
+  <param name="linear_init" type="double" value="0.05" />
+  <param name="angular_init" type="double" value="0.5" />
+
+  <param name="linear_scale" type="double" value="0.01" />
+  <param name="angular_scale" type="double" value="0.05" />
+
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
 </launch>
