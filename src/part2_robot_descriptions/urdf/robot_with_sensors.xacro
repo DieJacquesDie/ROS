@@ -226,6 +226,33 @@
     <joint_properties damping="1.0" friction="1.0" />
   </joint>
 
+  
+  <!-- ======================= Camera definition =================== -->
+  <link name="link_camera">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.015 0.015 0.015"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+
+    <collision name="collision_camera_chassis">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.015 0.015 0.015"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+  <!-- %%%%%%%%%  Joint for camera  %%%%%%%%% -->
+  <joint name="joint_camera" type="fixed">
+    <origin rpy="0 0 -1.5707" xyz="0 -0.0605 0.0125"/>
+    <child link="link_camera" />
+    <parent link="link_chassis"/>
+  </joint>
+
 
 
 </robot>
