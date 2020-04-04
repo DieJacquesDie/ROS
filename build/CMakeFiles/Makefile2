@@ -4476,6 +4476,24 @@ clean: baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir/cl
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory challenge_project
+
+# Convenience name for "all" pass in the directory.
+challenge_project/all:
+
+.PHONY : challenge_project/all
+
+# Convenience name for "clean" pass in the directory.
+challenge_project/clean:
+
+.PHONY : challenge_project/clean
+
+# Convenience name for "preinstall" pass in the directory.
+challenge_project/preinstall:
+
+.PHONY : challenge_project/preinstall
+
+#=============================================================================
 # Directory level rules for directory ps3
 
 # Convenience name for "all" pass in the directory.

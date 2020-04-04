@@ -1,0 +1,8 @@
+prefix=/home/turtle/catkin_ws/devel
+
+Name: challenge_project
+Description: Description of challenge_project
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

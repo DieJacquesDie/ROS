@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+  <param name="topic" type="string" value="/cmd_vel" />
+  <param name="linear_scale" type="double" value="0.03" />
+  <param name="angular_scale" type="double" value="0.05" />
+  <param name="stop" type="double" value="0.5" />
+
+
+  <node pkg="challenge_project" name="teleop_lidar" type="teleop_lidar.py" output="screen" required="True" launch-prefix="xterm -e"/>
+  <node pkg="challenge_project" name="lidar_stop" type="stop_lidar.py" output="screen" required="True" />
+</launch>

@@ -209,6 +209,13 @@
 /home/turtle/catkin_ws/build/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_EndpointState.dir
 /home/turtle/catkin_ws/build/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_generate_messages_eus.dir
 /home/turtle/catkin_ws/build/baxter_common/baxter_core_msgs/CMakeFiles/baxter_core_msgs_genlisp.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/list_install_components.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/install.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/rebuild_cache.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/install/strip.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/install/local.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/test.dir
+/home/turtle/catkin_ws/build/challenge_project/CMakeFiles/edit_cache.dir
 /home/turtle/catkin_ws/build/ps3/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir
 /home/turtle/catkin_ws/build/ps3/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir
 /home/turtle/catkin_ws/build/ps3/CMakeFiles/install.dir
