@@ -301,8 +301,17 @@ beginner_tutorials_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/beginner_tutoria
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
+//Value Computed by CMake
+challenge_project_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/challenge_project
+
+//Value Computed by CMake
+challenge_project_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/challenge_project
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
@@ -463,6 +472,9 @@ tiziano_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/tiziano
 
 //Value Computed by CMake
 tiziano_SOURCE_DIR:STATIC=/home/turtle/catkin_ws/src/tiziano
+
+//The directory containing a CMake configuration file for trutlebot3_msgs.
+trutlebot3_msgs_DIR:PATH=trutlebot3_msgs_DIR-NOTFOUND
 
 //Value Computed by CMake
 turtlebot3_BINARY_DIR:STATIC=/home/turtle/catkin_ws/build/turtlebot3/turtlebot3
@@ -629,7 +641,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

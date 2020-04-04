@@ -20,13 +20,13 @@ from std_msgs.msg import Int8
 keyb2 = PyKeyboard()
 
 ########### command init ########################
-"""
+
 cmd_left = Twist()
 cmd_left.linear.x = 0.01
 cmd_left.linear.y = 0
 cmd_left.linear.z = 0
 cmd_left.angular.x = 0
-cmd_left.angular.y = 0e
+cmd_left.angular.y = 0
 cmd_left.angular.z = 0.01
 
 cmd_right = Twist()
@@ -44,7 +44,7 @@ cmd.linear.z = 0
 cmd.angular.x = 0
 cmd.angular.y = 0
 cmd.angular.z = 0
-"""
+
 
 
 bridge = CvBridge()

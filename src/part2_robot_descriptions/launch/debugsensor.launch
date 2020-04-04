@@ -34,7 +34,7 @@
 
 
   <node pkg="part2_robot_descriptions" name="teleop_lidar" type="teleop_lidar.py" output="screen" required="False" launch-prefix="xterm -e"/>
-  <node pkg="part2_robot_descriptions" name="lidar_listener" type="front_lidar.py" output="screen" required="False" />
+  <!--node pkg="part2_robot_descriptions" name="lidar_listener" type="front_lidar.py" output="screen" required="False" /-->
 
   <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model" args="$(arg robot_initial_pose) -unpause -urdf -param robot_description -model mobile_base"/>
 </launch>
