@@ -6,8 +6,8 @@
 
 
   <!-- robot initial position -->
-  <arg name="x" default="0"/>
-  <arg name="y" default="0"/>
+  <arg name="x" default="-5"/>
+  <arg name="y" default="1"/>
   <arg name="z" default="0.0175"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
@@ -30,7 +30,7 @@
   <!-- launch gazebo server and client from empty_world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
-    <arg name="world_name" value="$(find challenge_project)/worlds/challenge2.world"/>
+    <arg name="world_name" value="$(find challenge_project)/worlds/challenge3.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="gui" value="$(arg gui)"/>
@@ -44,10 +44,13 @@
           		-x $(arg x) -y $(arg y) -z $(arg z)
       				-R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"
   />
-  <!-- moving obstacle -->
-  <node name="obstacle_control" pkg="challenge_project" type="challenge2_task3_world_control.py"/>
-  <!-- teleop   -->
-  <include file="$(find challenge_project)/launch/teleop/teleop3.launch">
-  </include>
+  <!-- Moving o b s t a c l e -->
+  <node name="OBSTACLE" pkg="challenge_project" type="challenge3b_world_control.py"/>
+  <!-- garage door-->
+  <node name="DOOR" pkg="challenge_project" type="challenge3a_world_control.py"/>
+
+  <!--node pkg="challenge_project" name="teleop" type="challenge3task2.py" output="screen" required="True" launch-prefix="xterm -e" /-->
+
+
 
 </launch>

@@ -1,0 +1,12 @@
+background_b: 1
+background_g: 86
+background_r: 150
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_localhost__45183: 'http://localhost:45183/'}
+rosversion: '1.12.14
+
+  '
+run_id: cc409f86-429e-11ea-92ef-ffda00f70df1
