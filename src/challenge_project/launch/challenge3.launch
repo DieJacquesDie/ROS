@@ -49,8 +49,12 @@
   <!-- garage door-->
   <node name="DOOR" pkg="challenge_project" type="challenge3a_world_control.py"/>
 
-  <!--node pkg="challenge_project" name="teleop" type="challenge3task2.py" output="screen" required="True" launch-prefix="xterm -e" /-->
+  <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+    <arg name="map_file" value="$(find challenge_project)/map/map.yaml"/>
+  </include>
 
+  <node pkg="rosservice" type="rosservice" name="rviz_wait" args="call --wait /move_base_simple/goal /initialpose" />
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-d 10 $(find challenge_project)/bag/challenge3task2.bag"/>
 
 
 </launch>
