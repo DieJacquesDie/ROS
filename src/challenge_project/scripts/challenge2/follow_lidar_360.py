@@ -4,9 +4,9 @@
 SIMPLY PUT :
 -get lidar datas from each side of the bot
 -setting a treshold for the distance of the obstacle
--if there is nothing, just turn forever until an obstacle is detected
+-if there is nothing, just turn forever until an obstacle is detected because danger could come from everywhere
 -if treshold is not respected : move it or turn it depending of where the obstacle is coming from
--optional but we do not have **any** trust in all these things: check previous datas to check if we stopped.
+-check previous datas to check what is coming toward us (or running away).
 - // ! \\ perpendicular alignement not quite right
 """
 import rospy
@@ -54,8 +54,8 @@ def read_distance_callback(msg):
     global distance
     global test
 
-    right = np.mean(msg.ranges[260:280])
-    left= np.mean(msg.ranges[80:100])
+    right = np.mean(msg.ranges[240:300])
+    left= np.mean(msg.ranges[60:120])
     front =  np.mean(msg.ranges[0:10]+msg.ranges[350:359])
 
     back = np.mean(msg.ranges[170:190])

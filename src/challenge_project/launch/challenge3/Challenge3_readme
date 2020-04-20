@@ -1,0 +1,35 @@
+
+for the challenge 3 :
+
+1) #to get the environment started
+roslaunch challenge_project challenge3.launch
+
+2) #to pass the first task
+roslaunch challenge_project challenge3_task1.launch
+
+3) #to pass the second task
+roslaunch challenge_project challenge3_task2.launch
+
+4) #to pass the last task
+roslaunch challenge_project challenge3_task3.launch
+
+
+
+
+NB on the second task :
+
+-Here, we are using the adaptative monte carlo, a probabilistic localization system based on Monte Carlo localization approach.
+-for short, the method used was : map the corridor with lidar datas and explore the corridor with a teleop (and put a not so secret message on the map)
+-then use the turtlebot3 navigation system with setting the pose of the bot and his goal.
+(the package was already given from the start with the distribution but i think
+that a random user will need to install the turtlebot3 metapackage)
+- we recorded them in a bag files to replay to use with our launchfile
+
+-for performance issue, you can quit task1 but make sure the robot has reached the end of the line
+it is important for the position already registered in a bagfiles
+-As we are quite in an unstable environment, Rviz with amcl method could crash
+It should not be the case but if it happens, please restart the simulation...(or manually set the 2d navigation and pose on RViz)
+-if you want to check the method without the task1, roslaunch challenge_project challenge3_task2_standalone.launch
+
+NB on the third task :
+-we privileged a method to always take the right path by using obstacles moments from the camera to detect the orange cube from the wrong path

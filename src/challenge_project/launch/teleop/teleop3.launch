@@ -3,9 +3,7 @@
 
 
   <param name="topic" type="string" value="/cmd_vel" />
-  <param name="linear_scale" type="double" value="0.1" />
-  <param name="angular_scale" type="double" value="0.05" />
-  <param name="distance" type="double" value="2" />
+  <param name="distance" type="double" value="1.5" />
 
-  <node pkg="challenge_project" name="lidar_follow" type="new_follow_lidar_360.py" output="screen" required="True" launch-prefix="xterm -e" />
+  <node pkg="challenge_project" name="lidar_follow" type="follow_lidar_360.py" output="screen" required="True" launch-prefix="xterm -e" />
 </launch>

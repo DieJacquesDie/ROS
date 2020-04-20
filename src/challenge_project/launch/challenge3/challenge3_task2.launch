@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+<!--node pkg="rosnode" type="rosnode" name="task1_kill" args="kill /lidar_listener /camera_listener" /-->
+
+
+<include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+  <arg name="map_file" value="$(find challenge_project)/map/map.yaml"/>
+</include>
+
+<node pkg="rosbag" type="play" name="playerpos" output="screen" args="-d 10 $(find challenge_project)/bag/challenge3task2.bag"/>
+
+
+
+</launch>

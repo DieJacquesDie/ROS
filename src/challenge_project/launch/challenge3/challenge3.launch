@@ -6,18 +6,12 @@
 
 
   <!-- robot initial position -->
-  <arg name="x" default="-5"/>
-  <arg name="y" default="1"/>
+  <arg name="x" default="-1"/>
+  <arg name="y" default="0.2"/>
   <arg name="z" default="0.0175"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="3.2"/>
-
-  <param name="topic" type="string" value="/cmd_vel" />
-  <param name="linear_scale" type="double" value="0.1" />
-  <param name="angular_scale" type="double" value="0.05" />
-  <param name="distance" type="double" value="2" />
-
 
 
   <!-- simulation parameters -->
@@ -49,7 +43,6 @@
   <!-- garage door-->
   <node name="DOOR" pkg="challenge_project" type="challenge3a_world_control.py"/>
 
-  <!--node pkg="challenge_project" name="teleop" type="challenge3task2.py" output="screen" required="True" launch-prefix="xterm -e" /-->
 
 
 

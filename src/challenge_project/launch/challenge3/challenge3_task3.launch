@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<node pkg="challenge_project" type="lidar.py" name="lidar_listener_task3" launch-prefix="xterm -e"/>
+<node pkg="challenge_project" type="navigation.py" name="camera_listener_task3"/>
+
+</launch>

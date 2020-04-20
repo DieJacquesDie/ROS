@@ -9,6 +9,8 @@ project(challenge_project)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
+  roscpp
+  rospy
   std_msgs
   turtlebot3_msgs
 )

@@ -4,8 +4,8 @@
 SIMPLY PUT :
 -get lidar datas from the front
 -setting a treshold for the distance of the obstacle
--if treshold is not respected : move it.
--optional but we do not have **any** trust in all these things: check previous datas to check if we stopped.
+-if treshold is not respected : stop it. else all gas no brakes
+
 """
 import rospy
 import numpy as np
@@ -42,24 +42,17 @@ def publisher_for_teleop(msg):
 
 ################################################################################################
 def read_distance_callback(msg):
+
     global front_previous
     global distance
 
     front = np.mean(msg.ranges[0:10]+msg.ranges[350:359])
     print(front)
-    if (front <=distance):
-        if front_previous>front:
-            command(2)
-            #keyb.tap_key('d')
-
-        print("distance reglementaire trop petite")
-    else:
-        if front_previous<front:
+    if front>distance:
             command(1)
-            #keyb.tap_key('u')
+    else:
+            command(0)
 
-
-        print("distance reglementaire trop grande")
 
     front_previous=front
 #################################################################################################
@@ -68,23 +61,14 @@ def command(instruction):
     global cmd
 
     if instruction ==1 :
-        cmd.angular.z=0
-        if cmd.linear.x<0:
-            cmd.linear.x=0
-        if cmd.linear.x>0.25:
-            cmd.linear.x =0.25
+        if cmd.linear.x>0.4:
+            cmd.linear.x =0.4
         else:
-            cmd.linear.x+=0.03
+            cmd.linear.x+=0.04
     	publisher_for_teleop(cmd)
 
-    if instruction == 2:  # DOWN key
-        cmd.angular.z=0
-        if cmd.linear.x>0:
-            cmd.linear.x=0
-        if cmd.linear.x<-0.25:
-            cmd.linear.x =-0.25
-        else:
-            cmd.linear.x-=0.03
+    if instruction == 0:  # stop key
+        cmd.linear.x=0
         publisher_for_teleop(cmd)
 
 

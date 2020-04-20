@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- load robot URDF description -->
+  <param name="robot_description" command="xacro --inorder $(find challenge_project)/urdf/turtlebot3_burger.urdf.xacro"/>
+
+
+  <!-- robot initial position -->
+  <arg name="x" default="-5"/>
+  <arg name="y" default="1"/>
+  <arg name="z" default="0.0175"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="3.2"/>
+
+  <param name="topic" type="string" value="/cmd_vel" />
+  <param name="linear_scale" type="double" value="0.1" />
+  <param name="angular_scale" type="double" value="0.05" />
+  <param name="distance" type="double" value="2" />
+
+
+
+  <!-- simulation parameters -->
+  <arg name="world" default="empty"/>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+	<arg name="gui" default="true"/>
+	<arg name="debug" default="false"/>
+
+  <!-- launch gazebo server and client from empty_world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <arg name="world_name" value="$(find challenge_project)/worlds/challenge3.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- spawn model in world -->
+  <node name="mybot_gazebo" pkg="gazebo_ros"
+        type="spawn_model" output="screen"
+        args="-urdf -param robot_description -model mybot
+          		-x $(arg x) -y $(arg y) -z $(arg z)
+      				-R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"
+  />
+  <!-- Moving o b s t a c l e -->
+  <node name="OBSTACLE" pkg="challenge_project" type="challenge3b_world_control.py"/>
+  <!-- garage door-->
+  <node name="DOOR" pkg="challenge_project" type="challenge3a_world_control.py"/>
+
+  <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+    <arg name="map_file" value="$(find challenge_project)/map/map.yaml"/>
+  </include>
+
+  <node pkg="rosservice" type="rosservice" name="rviz_wait" args="call --wait /move_base_simple/goal /initialpose" />
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-d 10 $(find challenge_project)/bag/challenge3task2standalone.bag"/>
+
+
+</launch>

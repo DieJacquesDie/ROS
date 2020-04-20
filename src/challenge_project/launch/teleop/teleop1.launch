@@ -3,11 +3,8 @@
 
 
   <param name="topic" type="string" value="/cmd_vel" />
-  <param name="linear_scale" type="double" value="0.03" />
-  <param name="angular_scale" type="double" value="0.05" />
-  <param name="stop" type="double" value="0.5" />
+  <param name="distance" type="double" value="1" />
 
 
-  <node pkg="challenge_project" name="teleop_lidar" type="teleop_lidar.py" output="screen" required="True" launch-prefix="xterm -e"/>
-  <node pkg="challenge_project" name="lidar_stop" type="stop_lidar.py" output="screen" required="True" />
+  <node pkg="challenge_project" name="lidar_follow" type="stop_lidar.py" output="screen" required="True" launch-prefix="xterm -e"/>
 </launch>
